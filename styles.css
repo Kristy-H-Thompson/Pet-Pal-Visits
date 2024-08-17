@@ -1,0 +1,350 @@
+body {
+    background-color:#F4F0CB;
+    font-family: "Raleway", sans-serif;
+    font-size:14px;
+    margin:0px;
+    overflow-x: hidden;
+    padding:0px;
+}
+
+nav {
+    background-color:#B3A580;
+    display:flex;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    top: 0;
+    width:100%;
+}
+
+h1 {
+    display:inline;
+    color:#111111;
+    font-family: "GFS Didot", serif;
+    font-size:2.7rem;
+    font-style: normal;
+    font-weight:500;
+    margin-left:2rem;
+}
+
+h2 {
+    display:block;
+    color:#111111;
+    font-family: "GFS Didot", serif;
+    font-size:2.5rem;
+    font-style: normal;
+    font-weight:400;
+}
+
+nav ul {
+    margin-right:2rem;
+    margin-top:3rem;
+}
+
+nav ul li {
+    display:inline;
+    font-family: "Raleway", sans-serif;
+    font-size:1rem;
+    margin:1rem;
+    text-decoration:none;
+}
+
+nav ul li a {
+    color:black;
+    text-decoration:none;
+}
+
+nav ul li a:hover {
+    color:#B7C68B;
+}
+
+header {
+    display:block;
+    margin-top:0rem;
+    margin-bottom:15rem;
+}
+
+header img{
+    background-image:auto;
+    background-origin: border-box;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    object-fit:cover;
+    height:75vh;
+}
+
+.info {
+    background-color:rgba(211, 211, 211, .6);
+    border-right:1px solid black;
+    box-sizing: border-box;
+    color:black;
+    display:inline;
+    float:left;
+    font-size:1.1rem;
+    height:75vh;
+    padding:1rem;
+    position:absolute;
+    width:30%;
+    z-index:2;
+}
+
+.info button{
+    background-color:#b7c68b;
+    border-radius:10px;
+    border:none;
+    box-shadow: 2px 2px 4px #000000;
+    display:block;
+    font-family: "GFS Didot", serif;
+    font-size:1rem;
+    font-weight:500;
+    grid-column:span 2;
+    letter-spacing: 2px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:2rem;
+    padding:.5rem;
+    width:55%;
+}
+
+.info button:hover{
+    background-color:#F4F0CB;
+}
+
+.info a{
+    color:black;
+    text-decoration:none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    display:inline;
+    float:right;
+    width:100%;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+.services {
+    display:grid;
+    grid-template-columns: 30% 60%;
+    margin-top:23rem;
+    width:100%;
+  }
+
+.section-title{
+  background-color:#A29574;
+  text-align:center;
+}
+
+.services-list {
+    box-sizing: border-box;
+    display:grid;
+    font-size:1rem;
+    gap:1rem;
+    grid-template-columns: 50% 50%;
+    padding:1rem;
+    padding-left:3rem;
+}
+
+.grid_span-two {
+    grid-column:span 2;
+}
+
+.team-grid {
+    background-color:#B3A580;
+    box-sizing: border-box;
+    display: grid;
+    gap:1rem;
+    grid-template-columns: 30% 30% 30%;
+    margin-top:6rem;
+    padding:2rem;
+    text-align:center;
+}
+
+.team-member_image{
+    aspect-ratio: 1/1.2;
+    float:right;
+    max-height:400px;
+    max-width:100%;
+}
+
+.team-member_name {
+    background-color:white;
+    float:right;
+    font-size:1rem;
+    margin-top:-1.5rem;
+    margin-right:-.5rem;
+    padding:1rem;
+    text-align:left;
+    width:40%;
+}
+
+.contact-grid{
+    box-sizing: border-box;
+    display: grid;
+    gap:1rem;
+    grid-template-columns: 30% 70%;
+    margin-top:6rem;
+}
+
+.contact-map {
+    background-color:#A29574;
+    box-sizing: border-box;
+    padding:1rem;
+    text-align:center;
+}
+
+.contact-map table {
+    text-align:center;
+    width:100%;
+}
+
+.contact-map form{
+    border:1px solid black;
+    box-sizing: border-box;
+    display:grid;
+    font-size:1rem;
+    grid-template-columns: 45% 45%;
+    text-align:center;
+    margin:2rem;
+    margin-top:3rem;
+    padding:2rem;
+    width:93%;
+}
+
+.contact-map button{
+    background-color:#b7c68b;
+    border-radius:10px;
+    border:none;
+    box-shadow: 2px 2px 4px #000000;
+    font-family: "GFS Didot", serif;
+    font-size:1rem;
+    font-weight:500;
+    grid-column:span 2;
+    letter-spacing: 2px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:2rem;
+    padding:.5rem;
+    width:35%;
+}
+
+.contact-map button:hover{
+    background-color:#F4F0CB;
+}
+
+.span3{
+    grid-column:span 3;
+}
+
+.span2{
+    grid-column:span 2;
+}
+
+label {
+    display:block;
+    margin-top:1rem;
+}
+
+fieldset{
+    border:none;
+    text-align:left;
+}
+
+input {
+    height:1.2rem;
+    width:90%;
+}
+
+#message {
+    height:80%;
+    width:120%;
+}
+
+legend {    
+    display:block;
+    color:#111111;
+    font-family: "GFS Didot", serif;
+    font-size:2.5rem;
+    font-style: normal;
+    font-weight:400;
+}
+
