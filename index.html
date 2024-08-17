@@ -8,11 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    <title>Pet Pal Visits With Matthew</title>
-  </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
 
 <body>      
-    <nav>                
-        <h1>Pet Pal Visits With Matthew</h1>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo"><h1>Pet Pal Visits With Matthew</h1></label>
+
         <ul> 
             <li><a href="#home" alt="Home">Home</a></li>
             <li><a href="#services" alt="Services">Our Services</a></li>
@@ -22,29 +28,29 @@
         </ul>
     </nav>
 
+
     <header>
         <div class="info" id="home">
             <h2>About Us</h2>
             Heading out on a getaway? Make sure your four-legged buddy gets the VIP treatment at home! Discover the best care options here, so you can travel worry-free while your pet gets plenty of love.
             <a href="#contact" alt="contact"><button>Schedule Today!</button></a>
         </div>
+
+
         <!-- Slideshow container -->
         <div class="slideshow-container">
 
         <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
+        <div class="slides fade">
             <img src="./assets/images/slider2.jpg" style="width:100%">
         </div>
 
-        <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
+        <div class="slides fade">
             <img src="./assets/images/slider1.jpg" style="width:100%">
         </div>
   
         <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
+        <div class="slides fade">
             <img src="./assets/images/slider3.jpg" style="width:100%">
         </div>
   
@@ -113,7 +119,26 @@
 
     <section>
             <div class="contact-grid" id="contact">
-                <div id="testimonials">Testimonials</div>
+                <div id="testimonials"> <h2>Testimonials</h2>
+                    <div class="testimonial">                        
+                        <p>04/20/2024</p>
+                        <p>"This is where you can qoute what someone said about your buissness. It can be as long or short as you like"</p>
+                        <span>--Client Name</span>
+                    </div>
+
+                    <div class="testimonial">
+                        <p>"This is where you can qoute what someone said about your buissness. It can be as long or short as you like"</p>
+                        <span>--Client Name</span>
+                        <p>04/20/2024</p>
+                    </div>
+
+                    <div class="testimonial">
+                        <p>"This is where you can qoute what someone said about your buissness. It can be as long or short as you like"</p>
+                        <span>--Client Name</span>
+                        <p>04/20/2024</p>
+                    </div>
+                </div>
+
                 <div class="contact-map">        
                     <h2>Contact Us</h2>
                     <table>
@@ -170,7 +195,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
   let i;
-  let slides = document.getElementsByClassName("mySlides");
+  let slides = document.getElementsByClassName("slides");
   let dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
