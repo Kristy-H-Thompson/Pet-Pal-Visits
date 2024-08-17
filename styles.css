@@ -30,7 +30,7 @@ h2 {
     display:block;
     color:#111111;
     font-family: "GFS Didot", serif;
-    font-size:2.5rem;
+    font-size:2.6rem;
     font-style: normal;
     font-weight:400;
 }
@@ -84,6 +84,7 @@ header img{
     padding:1rem;
     position:absolute;
     width:30%;
+    min-width:300px;
     z-index:2;
 }
 
@@ -124,7 +125,7 @@ header img{
   }
   
   /* Hide the images by default */
-  .mySlides {
+  .slides {
     display: none;
   }
   
@@ -278,6 +279,7 @@ header img{
 }
 
 .contact-map form{
+    background-color:#c9c2af;
     border:1px solid black;
     box-sizing: border-box;
     display:grid;
@@ -287,7 +289,7 @@ header img{
     margin:2rem;
     margin-top:3rem;
     padding:2rem;
-    width:93%;
+    width:90%;
 }
 
 .contact-map button{
@@ -348,3 +350,126 @@ legend {
     font-weight:400;
 }
 
+#testimonials {
+    text-align: center;
+    padding:0rem 2rem;
+}
+
+.testimonial {
+    text-align:left;
+    background-color:#B3A580;
+    box-sizing: border-box;;
+    font-size:.9rem;
+    margin-top:2rem;
+    padding:1rem;
+
+}
+
+nav {
+    background-color: #B3A580;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    color:black;
+    font-size: 2rem;
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul li {
+    margin-right: 20px;
+  }
+  
+  ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  ul li a:hover {
+    color: lightgreen;
+  }
+  
+  .checkbtn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #check {
+    display: none;
+  }
+  
+  @media (max-width: 950px) {
+    .checkbtn {
+      display: block;
+      order: 1;
+      margin-right: 20px;
+    }
+  
+    nav ul {
+      position: fixed;
+      top: 80px;
+      right: -120%;
+      background-color:#A29574;
+      width: 50vw;
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s;
+      z-index:3;
+      overflow-x: hidden;
+    }
+  
+    ul li {
+      margin: 20px 0;
+    }
+  
+    ul li a {
+      font-size: 20px;
+    }
+  
+    #check:checked ~ ul {
+      right: 0;
+      margin-top:-2%;
+      margin-right:-5%;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .services-list {
+        padding:3rem;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
+  }
+
+  .team-member_name {
+    font-size:.8rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+  .fa, .fas { 
+    color:black;
+    margin-right:2rem;
+  }
