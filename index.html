@@ -12,7 +12,7 @@
 </head>
 
 <body>      
-    <nav>
+    <nav id="nav">
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
@@ -20,11 +20,10 @@
         <label class="logo"><h1>Pet Pal Visits With Matthew</h1></label>
 
         <ul> 
-            <li><a href="#home" alt="Home">Home</a></li>
+            <li><a href="index.html" alt="Home">Home</a></li>
             <li><a href="#services" alt="Services">Our Services</a></li>
-            <li><a href="#team" alt="Our Team">Our Team</a></li>
-            <li><a href="#testimonials" alt="Testimonials">Testimonials</a></li>
-            <li><a href="#contact" alt="contact">Contact Us</a></li>
+            <li><a href="gallery.html" alt="Our Team">Gallery</a></li>
+            <li><a href="testimonials.html" alt="Testimonials">Testimonials</a></li>
         </ul>
     </nav>
 
@@ -107,53 +106,40 @@
             <div class="span3"><h2>Our Team</h2></div>
             <div class="team-member">
                 <img src="./assets/images/matthew.png" class="team-member_image" alt="Matthew Hayes">
-                <div class="team-member_name"> Matthew Hayes<br> Pet Sitter</div>
+                <div class="team-member_name"> <span>Matthew Hayes</span><br> Owner</div>
             </div>
 
             <div class="team-member">
                 <img src="./assets/images/josie.png" class="team-member_image" alt="Josie">
-                <div class="team-member_name">Josie<br> Pet Sitter</div>
+                <div class="team-member_name"><span>Josie</span><br> Pet Sitter</div>
             </div>
         </div>
     </section>
 
     <section>
             <div class="contact-grid" id="contact">
-                <div id="testimonials"> <h2>Testimonials</h2>
-                    <div class="testimonial">                        
-                        <p>04/20/2024</p>
-                        <p>"This is where you can qoute what someone said about your buissness. It can be as long or short as you like"</p>
-                        <span>--Client Name</span>
-                    </div>
-
+                <div class="indexTestimonials"> <h2>Recent Testimonials</h2>
                     <div class="testimonial">
-                        <p>"This is where you can qoute what someone said about your buissness. It can be as long or short as you like"</p>
-                        <span>--Client Name</span>
-                        <p>04/20/2024</p>
+                        <img src="https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/458217897_27332480726351322_4986172854566337414_n.jpg?stp=cp6_dst-jpg&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=_577GCfntnEQ7kNvgHRKz4D&_nc_ht=scontent-den2-1.xx&_nc_gid=Avurz7NeKDSLr52VQxu4N9e&oh=00_AYCJKEWHoz5HQ8J32IJnvLkjSM2HPbC10BeqX89Zv-0z5Q&oe=66EB9DAA">
+                        <h3>Jasper & Sharkie</h3>
+                        <p> I would give Matthew a million stars! Hands down the perfect pet sitter for our fur babies. I absolutely know that Patches our sweet kitty was the easiest to take care of haha, while the timid Jasper (our Aussiedoodle) was a challenge that Matthew accepted.</p>
+                        <p> I believe that Jasper did progress quite well with lots of patience and work from Matthew. </p>
+                        <p> Matthew handled everything (including surprises) with ease and attention to detail. </p>
+                        <p> I highly recommend Matthew’s services and will certainly use him again. </p> 
+                            <span> 09/08/2024 -- Stefanie Clark</span>
                     </div>
-
                     <div class="testimonial">
-                        <p>"This is where you can qoute what someone said about your buissness. It can be as long or short as you like"</p>
-                        <span>--Client Name</span>
-                        <p>04/20/2024</p>
+                        <img src="https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/420181050_10161637751960879_8548257544947126216_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=eTLVOW-SNRIQ7kNvgFy_HIE&_nc_ht=scontent-den2-1.xx&_nc_gid=AKxVMXH076mljK2bRJnHHio&oh=00_AYBDgI_eSKNNKl-V2NME6Zz79L5Xpi5GCN1BbSSkEcf6PQ&oe=66EB952A">
+                        <h3>Bo, Duke, Maisey Ana & Zeke</h3>
+                        <p> Matthew did such a wonderful job with my pups (and there’s a lot of them). I got daily updates and he left me a detailed chart of what times they got fed and got their meds. He even was sure to take great care of them when he got sick while I was away. My house was as clean when I got home despite the rain causing mud my dogs inevitably brought in the house. He played fetch with them, and even caught when one of my older dogs had just an ever so slight limp. He dried them off when they came inside from the rain. 100% recommend Matthew. He accurately medicated my epileptic Aussie (who is also blind and deaf). Bo Duke Maisey Ana and Zeke give him 5 stars! 
+                        </p> 
+                            <span> 04/02/2024 -- Lizz Burt</span>
                     </div>
                 </div>
+                   
+                <section>
 
                 <div class="contact-map">        
-                    <h2>Contact Us</h2>
-                    <table>
-                        <tr>
-                            <td>
-                                <h3>Contact Information</h3>
-                                <strong>Phone Number: </strong>(xxx) xxx-xxxx<br>
-                                <strong>Email: </strong> myemail@gmail.com
-                            </td>
-                            <td>
-                                <h3>Social Media</h3>
-                                <strong>Facebook</strong> link here
-                            </td>
-                        </tr>
-                    </table>
 
                     <form>
                         <legend class="span2">Send Us An Email</legend>
@@ -175,7 +161,31 @@
                         <button >Send</button>
                     </form>
                 </div>
+
+                <div class="contact-map">
+                    <h2>Contact Information</h2>
+                    <table>
+                        <tr>
+                            <td>
+                                <h3>Give us a howl:</h3> 
+                                Phone Number: (XXX) XXX-XXXX<br>
+                                Email: blahblah@gmail.com
+                            </td>
+                            <td>
+                                <h3>Join our pack -- follow us on social media!</h3>
+                                Facebook: link<br>
+                                Instagram: link
+
+                            </td>
+                        </tr>
+                    </table><br><br>
+                </div>
             </div>
+
+
+           
+
+        </section>>
     </section>
 </body>
 
@@ -207,6 +217,26 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
+}
+
+
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("nav");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.scrollY >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
 }
 </script>
 </html>

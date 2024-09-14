@@ -35,6 +35,10 @@ h2 {
     font-weight:400;
 }
 
+h3 {
+  text-decoration: underline;
+}
+
 nav ul {
     margin-right:2rem;
     margin-top:3rem;
@@ -59,7 +63,6 @@ nav ul li a:hover {
 
 header {
     display:block;
-    margin-top:0rem;
     margin-bottom:15rem;
 }
 
@@ -86,6 +89,7 @@ header img{
     width:30%;
     min-width:300px;
     z-index:2;
+    margin-top:2.2rem;
 }
 
 .info button{
@@ -122,6 +126,7 @@ header img{
     width:100%;
     position: relative;
     margin: auto;
+    margin-top:2.2rem;
   }
   
   /* Hide the images by default */
@@ -212,6 +217,7 @@ header img{
 
 .section-title{
   background-color:#A29574;
+  box-shadow: 10px 5px 5px gray;
   text-align:center;
 }
 
@@ -229,6 +235,10 @@ header img{
     grid-column:span 2;
 }
 
+.team {
+  box-shadow: 10px 5px 5px gray;
+}
+
 .team-grid {
     background-color:#B3A580;
     box-sizing: border-box;
@@ -242,6 +252,8 @@ header img{
 
 .team-member_image{
     aspect-ratio: 1/1.2;
+    border:1.5px solid #5e5642;
+    box-shadow: 10px 5px 5px #5e5642;
     float:right;
     max-height:400px;
     max-width:100%;
@@ -249,6 +261,7 @@ header img{
 
 .team-member_name {
     background-color:white;
+    border:4px dashed #B7C68B;
     float:right;
     font-size:1rem;
     margin-top:-1.5rem;
@@ -256,6 +269,12 @@ header img{
     padding:1rem;
     text-align:left;
     width:40%;
+}
+
+.team-member_name span {
+  font-family: "GFS Didot", serif;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .contact-grid{
@@ -271,6 +290,7 @@ header img{
     box-sizing: border-box;
     padding:1rem;
     text-align:center;
+    margin-top: 8rem;
 }
 
 .contact-map table {
@@ -281,6 +301,7 @@ header img{
 .contact-map form{
     background-color:#c9c2af;
     border:1px solid black;
+    box-shadow: 10px 5px 5px #5e5642;
     box-sizing: border-box;
     display:grid;
     font-size:1rem;
@@ -358,7 +379,8 @@ legend {
 .testimonial {
     text-align:left;
     background-color:#B3A580;
-    box-sizing: border-box;;
+    box-shadow: 10px 5px 5px gray;
+    box-sizing: border-box;
     font-size:.9rem;
     margin-top:2rem;
     padding:1rem;
@@ -366,12 +388,20 @@ legend {
 }
 
 nav {
-    background-color: #B3A580;
+    background-image: linear-gradient(to right, #d0c8b1, #a49467);
+    border-bottom: 4px solid #A29574;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    position:sticky;
+    z-index:3;
+  }
+
+.sticky {
+    position: fixed;
+    top: 0;
   }
   
   .logo {
@@ -410,6 +440,131 @@ nav {
   #check {
     display: none;
   }
+
+  .testimonials-container {
+    padding: 0 40px;
+    margin: 30px 0 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .testimonials {
+    display: flex;
+    gap:1rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  
+  .testimonials-container h2 {
+    padding: 10px 10px 15px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 30px;
+  }
+
+
+  .testimonial {
+    width: 25%;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #b5a881, #a49467);
+    padding: 20px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .indexTestimonials{
+    padding:2rem;
+    padding-top:0px;
+  }
+
+  .indexTestimonials .testimonial{
+    width:100%;
+  }
+
+  
+  .testimonial:after {
+    content: "";
+    display: block; /* reduce the damage in FF3.0 */
+    position: absolute;
+    bottom: -15px;
+    right: 50px;
+    width: 0;
+    border-width: 15px 20px 0;
+    border-style: solid;
+    border-color: #a49467 transparent;
+  }
+  
+  .testimonial h3 {
+    display:inline;
+  }
+
+  .testimonial span {
+    display:block;
+    font-weight: bold;
+    margin-top:2rem;
+    text-align: right;
+  }
+
+  .testimonial img {
+    aspect-ratio: 1/1;
+    border:3px solid #5e5642;
+    border-radius: 100%;
+    display:inline;
+    float: right;
+    width:25%;
+  }
+  
+  .testimonial p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .testimonal-author {
+    font-size: 1rem;
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+  }
+
+   .testimonial-form {
+    background-color:#A29574;
+    box-sizing: border-box;
+    padding:1rem;
+    text-align:center;
+}
+  .testimonial-form form{
+    background-color:#c9c2af;
+    border:1px solid black;
+    box-shadow: 10px 5px 5px #5e5642;
+    box-sizing: border-box;
+    display:grid;
+    font-size:1rem;
+    grid-template-columns: 45% 45%;
+    text-align:center;
+    margin:2rem;
+    margin-top:3rem;
+    padding:2rem;
+    width:95%;
+}
+
+.testimonial-form button{
+    background-color:#b7c68b;
+    border-radius:10px;
+    border:none;
+    box-shadow: 2px 2px 4px #000000;
+    font-family: "GFS Didot", serif;
+    font-size:1rem;
+    font-weight:500;
+    grid-column:span 2;
+    letter-spacing: 2px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:2rem;
+    padding:.5rem;
+    width:35%;
+}
+  
   
   @media (max-width: 950px) {
     .checkbtn {
@@ -420,7 +575,7 @@ nav {
   
     nav ul {
       position: fixed;
-      top: 80px;
+      top: 105px;
       right: -120%;
       background-color:#A29574;
       width: 50vw;
@@ -467,9 +622,30 @@ nav {
   .contact-grid {
     grid-template-columns: 1fr;
   }
+
+  .contact-map {
+    margin-top: 6rem;
+    padding-top:15rem;
+  }
 }
 
   .fa, .fas { 
     color:black;
     margin-right:2rem;
   }
+
+
+  @media all AND (max-width: 700px) {
+    
+    .testimonials {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .testimonial {
+      width: 90%;
+      margin-bottom: 60px;
+    }
+  
+  }
+  
