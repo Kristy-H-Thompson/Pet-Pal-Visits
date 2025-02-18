@@ -1,242 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    <title>Pet Pal Visits With Matthew</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Sitting Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="font-sans bg-[#f2f8f1]">
 
-<body>      
-    <nav id="nav">
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <label class="logo"><h1>Pet Pal Visits With Matthew</h1></label>
-
-        <ul> 
-            <li><a href="index.html" alt="Home">Home</a></li>
-            <li><a href="#services" alt="Services">Our Services</a></li>
-            <li><a href="gallery.html" alt="Our Team">Gallery</a></li>
-            <li><a href="testimonials.html" alt="Testimonials">Testimonials</a></li>
+    <!-- Navbar -->
+<!-- Navbar -->
+<nav class="bg-gradient-to-r from-[#254a58] to-[#407e94] text-white p-4 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center space-x-4">
+            <img src="https://i.postimg.cc/bN8Fnxj8/mountain.png" alt="Pet Pal Visits Logo" class="w-20 h-auto">
+            <div class="text-3xl font-bold">Pet Pal Visits With Matthew</div>
+        </div>
+        
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-8 text-lg">
+            <li><a href="#hero" class="hover:text-[#c0dee3]">Home</a></li>
+            <li><a href="#services" class="hover:text-[#c0dee3]">Services</a></li>
+            <li><a href="#team" class="hover:text-[#c0dee3]">Our Team</a></li>
+            <li><a href="#testimonials" class="hover:text-[#c0dee3]">Testimonials</a></li>
+            <li><a href="#contact" class="hover:text-[#c0dee3]">Contact</a></li>
         </ul>
-    </nav>
 
-
-    <header>
-        <div class="info" id="home">
-            <h2>About Us</h2>
-            Heading out on a getaway? Make sure your four-legged buddy gets the VIP treatment at home! Discover the best care options here, so you can travel worry-free while your pet gets plenty of love.
-            <a href="#contact" alt="contact"><button>Schedule Today!</button></a>
+        <!-- Mobile Menu Button (Hamburger) -->
+        <div class="md:hidden flex items-center">
+            <button id="hamburger" class="text-3xl">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
+    </div>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobileMenu" class="md:hidden absolute left-0 top-0 w-full bg-[#254a58] bg-opacity-90 text-white p-8 transform -translate-y-full transition-all duration-300 ease-in-out">
+        <ul class="space-y-6 text-lg">
+            <li><a href="#hero" class="hover:text-[#c0dee3]">Home</a></li>
+            <li><a href="#services" class="hover:text-[#c0dee3]">Services</a></li>
+            <li><a href="#team" class="hover:text-[#c0dee3]">Our Team</a></li>
+            <li><a href="#testimonials" class="hover:text-[#c0dee3]">Testimonials</a></li>
+            <li><a href="#contact" class="hover:text-[#c0dee3]">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
 
-        <!-- Slideshow container -->
-        <div class="slideshow-container">
+    <!-- Script for toggling the mobile menu -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('-translate-y-full');  // Toggles the menu sliding in and out
+        });
+    </script>
 
-        <!-- Full-width images with number and caption text -->
-        <div class="slides fade">
-            <img src="./assets/images/slider2.jpg" style="width:100%">
-        </div>
 
-        <div class="slides fade">
-            <img src="./assets/images/slider1.jpg" style="width:100%">
-        </div>
-  
-        <!-- Full-width images with number and caption text -->
-        <div class="slides fade">
-            <img src="./assets/images/slider3.jpg" style="width:100%">
-        </div>
-  
-
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-    
-        <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div><br>
-    </header>
-    <br><br><br><br>
-    <section class="services" id="services">
-        <div class="section-title"><h2>Our Services</h2></div>
-
-        <div class="services-list">
-            <div>
-                <h3>SNUGGLE STOP</h3>
-                Our basic visit includes fresh food, water change, a walk and/or playtime, litter box cleaning, and lots of affection and love!
-                <br>*20-30 minutes in length*
-            </div>
-
-            <div>
-                <h3>PAWS AND PLAY</h3>
-                Our Paws and Play visit includes everything in our Snuggle Stop, but is extended by thirty minutes so that your pet gets a little extra play time.
-                <br>*60 minutes in length*
-            </div>
-
-            <div>
-                <h3>OVERNIGHT STAYS</h3>
-                For over night stays we come into your home to care for your pet(s), and carry out their normal routine that you perform with them daily. They will have companionship throughout the night, and you will have peace of mind!                <br>*60 minutes in length*
-            </div>
-
-            <div>
-                <h3>WAGS AND WANDER</h3>
-                For dog walks we come to your home and walk your dog(s) on their normal routine walk. We can also pick your dog(s) up and take them to a doggy park of your choice (price may increase by driving distance)            
-            </div>
-
-            <div class="grid_span-two ">
-                <h3>INITIAL CONSULTATION</h3>
-                This complimentary visit is essential for all new clients. We’ll come to your home to spend time with you and your pet(s), allowing you to meet your pet sitter, learn about Pet Pal Visits With Matthew, ask questions, and discuss your pet’s individual needs. The Initial Meet & Greet typically lasts about 30 minutes.
-            </div>            
-        </div>
+    <!-- Hero Section -->
+    <section id="hero" class="bg-gradient-to-r from-[#407e94] to-[#8abac5] text-white text-center py-20">
+        <h1 class="text-5xl font-bold mb-4">Trust Us to Care for Your Furry Friends</h1>
+        <p class="text-xl mb-8">Professional, reliable, and loving pet care for your pets when you can't be there.</p>
+        <a href="#contact" class="bg-[#254a58] hover:bg-[#407e94] text-white py-2 px-6 rounded-lg shadow-lg">Schedule an Appointment Today</a>
     </section>
 
-    <section class="team" id="team">
-        <div class="team-grid">        
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-[#f8f9fa]">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-[#254a58] mb-10">Our Services</h2>
+            <p class="text-lg text-[#254a58] mb-12">Heading out on a getaway? Make sure your four-legged buddy gets the VIP treatment at home! Discover the best care options here, so you can travel worry-free while your pet gets plenty of love.
+</p>
             
-            <div class="span3"><h2>Our Team</h2></div>
-            <div class="team-member">
-                <img src="./assets/images/matthew.png" class="team-member_image" alt="Matthew Hayes">
-                <div class="team-member_name"> <span>Matthew Hayes</span><br> Owner</div>
-            </div>
+            <!-- Service Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+              
+               <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                    <div class="text-[#254a58] text-4xl mb-4">
+                        <i class="fas fa-dog"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-[#254a58] mb-4">INITIAL CONSULTATION
+</h3>
+                    <p class="text-[#254a58]">
+This complimentary visit is essential for all new clients. We’ll come to your home to spend time with you and your pet(s), allowing you to meet your pet sitter, learn about Pet Pal Visits With Matthew, ask questions, and discuss your pet’s individual needs. The Initial Meet & Greet typically lasts about 30 minutes.
+</p>
+                </div>
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                    <div class="text-[#254a58] text-4xl mb-4">
+                        <i class="fas fa-dog"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-[#254a58] mb-4">SNUGGLE STOP</h3>
+                    <p class="text-[#254a58]">
+Our basic visit includes fresh food, water change, a walk and/or playtime, litter box cleaning, and lots of affection and love!
+*20-30 minutes in length*</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                    <div class="text-[#254a58] text-4xl mb-4">
+                        <i class="fas fa-cat"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-[#254a58] mb-4">PAWS AND PLAY
+</h3>
+                    <p class="text-[#254a58]">Our Paws and Play visit includes everything in our Snuggle Stop, but is extended by thirty minutes so that your pet gets a little extra play time.
+*60 minutes in length*</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                    <div class="text-[#254a58] text-4xl mb-4">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-[#254a58] mb-4">OVERNIGHT STAYS</h3>
+                    <p class="text-[#254a58]">For over night stays we come into your home to care for your pet(s), and carry out their normal routine that you perform with them daily. They will have companionship throughout the night, and you will have peace of mind!</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                    <div class="text-[#254a58] text-4xl mb-4">
+                        <i class="fas fa-bird"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-[#254a58] mb-4">WAGS AND WANDER</h3>
+                    <p class="text-[#254a58]">For dog walks we come to your home and walk your dog(s) on their normal routine walk. We can also pick your dog(s) up and take them to a doggy park of your choice (price may increase by driving distance)
+</p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                    <div class="text-[#254a58] text-4xl mb-4">
+                        <i class="fas fa-fish"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-[#254a58] mb-4">Fish Sitting</h3>
+                    <p class="text-[#254a58]">We take care of your aquatic pets, ensuring their tanks are clean, the water is balanced, and they’re fed on schedule.</p>
+                </div>
+                
+               
+        </div>
+    </section>
 
-            <div class="team-member">
-                <img src="./assets/images/josie.png" class="team-member_image" alt="Josie">
-                <div class="team-member_name"><span>Josie</span><br> Pet Sitter</div>
+    <!-- Animal Gallery Section -->
+    <section id="slideshow" class="py-16 bg-[#c0dee3]">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-[#254a58] mb-10">Our Happy Clients</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Image 1 -->
+                <div class="relative group">
+                    <img class="w-full h-64 object-cover rounded-lg shadow-lg transform transition duration-300 ease-in-out group-hover:scale-105" src="./assets/images/slider1.jpg" alt="Pet 1">
+                    <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white text-lg font-semibold">Playful Pup</p>
+                    </div>
+                </div>
+                <!-- Image 2 -->
+                <div class="relative group">
+                    <img class="w-full h-64 object-cover rounded-lg shadow-lg transform transition duration-300 ease-in-out group-hover:scale-105" src="./assets/images/slider2.jpg" alt="Pet 2">
+                    <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white text-lg font-semibold">Friendly Cat</p>
+                    </div>
+                </div>
+                <!-- Image 3 -->
+                <div class="relative group">
+                    <img class="w-full h-64 object-cover rounded-lg shadow-lg transform transition duration-300 ease-in-out group-hover:scale-105" src="./assets/images/slider3.jpg" alt="Pet 3">
+                    <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white text-lg font-semibold">Cute Bunny</p>
+                    </div>
+                </div>
+                <!-- Image 4 -->
+                <div class="relative group">
+                    <img class="w-full h-64 object-cover rounded-lg shadow-lg transform transition duration-300 ease-in-out group-hover:scale-105" src="https://via.placeholder.com/800x400/bed3c7/ffffff?text=Happy+Pets" alt="Pet 4">
+                    <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white text-lg font-semibold">Happy Kitten</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section>
-            <div class="contact-grid" id="contact">
-                <div class="indexTestimonials"> <h2>Recent Testimonials</h2>
-                    <div class="testimonial">
-                        <img src="https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/458217897_27332480726351322_4986172854566337414_n.jpg?stp=cp6_dst-jpg&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=_577GCfntnEQ7kNvgHRKz4D&_nc_ht=scontent-den2-1.xx&_nc_gid=Avurz7NeKDSLr52VQxu4N9e&oh=00_AYCJKEWHoz5HQ8J32IJnvLkjSM2HPbC10BeqX89Zv-0z5Q&oe=66EB9DAA">
-                        <h3>Jasper & Sharkie</h3>
-                        <p> I would give Matthew a million stars! Hands down the perfect pet sitter for our fur babies. I absolutely know that Patches our sweet kitty was the easiest to take care of haha, while the timid Jasper (our Aussiedoodle) was a challenge that Matthew accepted.</p>
-                        <p> I believe that Jasper did progress quite well with lots of patience and work from Matthew. </p>
-                        <p> Matthew handled everything (including surprises) with ease and attention to detail. </p>
-                        <p> I highly recommend Matthew’s services and will certainly use him again. </p> 
-                            <span> 09/08/2024 -- Stefanie Clark</span>
-                    </div>
-                    <div class="testimonial">
-                        <img src="https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/420181050_10161637751960879_8548257544947126216_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=eTLVOW-SNRIQ7kNvgFy_HIE&_nc_ht=scontent-den2-1.xx&_nc_gid=AKxVMXH076mljK2bRJnHHio&oh=00_AYBDgI_eSKNNKl-V2NME6Zz79L5Xpi5GCN1BbSSkEcf6PQ&oe=66EB952A">
-                        <h3>Bo, Duke, Maisey Ana & Zeke</h3>
-                        <p> Matthew did such a wonderful job with my pups (and there’s a lot of them). I got daily updates and he left me a detailed chart of what times they got fed and got their meds. He even was sure to take great care of them when he got sick while I was away. My house was as clean when I got home despite the rain causing mud my dogs inevitably brought in the house. He played fetch with them, and even caught when one of my older dogs had just an ever so slight limp. He dried them off when they came inside from the rain. 100% recommend Matthew. He accurately medicated my epileptic Aussie (who is also blind and deaf). Bo Duke Maisey Ana and Zeke give him 5 stars! 
-                        </p> 
-                            <span> 04/02/2024 -- Lizz Burt</span>
+    <!-- Our Team Section -->
+    <section id="team" class="py-16 bg-[#8abac5]">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-[#254a58] mb-10">Meet Our Team</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+                <!-- Team member -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img class="w-32 h-32 rounded-full mx-auto mb-4" src="./assets/images/matthew.png" alt="Team Member 1">
+                    <h3 class="text-xl font-semibold text-[#254a58]">Matthew Hayes</h3>
+                    <p class="text-sm text-gray-600 mb-2">Owner</p>
+                    <div class="flex justify-center space-x-4 text-[#407e94]">
+                        <i class="fas fa-paw text-[#254a58]"></i>
+                        <i class="fas fa-heart text-[#c0dee3]"></i>
                     </div>
                 </div>
-                   
-                <section>
-
-                <div class="contact-map">        
-
-                    <form>
-                        <legend class="span2">Send Us An Email</legend>
-                        <fieldset class="contact-general">
-                            <label for="name">Name</label>
-                            <input type="text" name="name" id="name"> </input>
-
-                            <label for="email">Email</label>
-                            <input type="text" name="email" id="email"> </input>
-
-                            <label for="subject">Subject</label>
-                            <input type="text" name="subject" id="subject"></input>
-                        </fieldset>
-
-                        <fieldset class="contact-message">
-                            <label for="message">Message</label>
-                            <input type="textarea" name="message" id="message"></input>
-                        </fieldset>
-                        <button >Send</button>
-                    </form>
+                <!-- Team member -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img class="w-32 h-32 rounded-full mx-auto mb-4" src="./assets/images/josie.png" alt="Team Member 2">
+                    <h3 class="text-xl font-semibold text-[#254a58]">Josie</h3>
+                    <p class="text-sm text-gray-600 mb-2">Pet Sitter</p>
+                    <div class="flex justify-center space-x-4 text-[#407e94]">
+                        <i class="fas fa-paw text-[#254a58]"></i>
+                        <i class="fas fa-leaf text-[#8abac5]"></i>
+                    </div>
                 </div>
-
-                <div class="contact-map">
-                    <h2>Contact Information</h2>
-                    <table>
-                        <tr>
-                            <td>
-                                <h3>Give us a howl:</h3> 
-                                Phone Number: (XXX) XXX-XXXX<br>
-                                Email: blahblah@gmail.com
-                            </td>
-                            <td>
-                                <h3>Join our pack -- follow us on social media!</h3>
-                                Facebook: link<br>
-                                Instagram: link
-
-                            </td>
-                        </tr>
-                    </table><br><br>
+                <!-- Team member -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <img class="w-32 h-32 rounded-full mx-auto mb-4" src="https://via.placeholder.com/150" alt="Team Member 3">
+                    <h3 class="text-xl font-semibold text-[#254a58]">Emma Grace</h3>
+                    <p class="text-sm text-gray-600 mb-2">Pet Walker</p>
+                    <div class="flex justify-center space-x-4 text-[#407e94]">
+                        <i class="fas fa-paw text-[#254a58]"></i>
+                        <i class="fas fa-dog text-[#8abac5]"></i>
+                    </div>
                 </div>
             </div>
-
-
-           
-
-        </section>>
+        </div>
     </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-[#c0dee3]">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-[#254a58] mb-10">What Our Clients Say</h2>
+            <div class="space-y-8">
+                <!-- Testimonials Section -->
+<section id="testimonials" class="py-16 bg-[#c0dee3]">
+    <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-[#254a58] mb-10">What Our Clients Say</h2>
+        <div class="space-y-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-[#8abac5] p-6 rounded-lg shadow-md">
+                <div class="flex items-center justify-center space-x-6 mb-4">
+                    <img class="w-16 h-16 rounded-full" src="https://via.placeholder.com/150" alt="Client 1">
+                    <div class="text-[#254a58] font-semibold text-lg">Alex Jones</div>
+                </div>
+                <p class="text-lg italic mb-4">"PetSitters were amazing! They took care of my dog while I was away for the weekend. I got regular updates and photos!"</p>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="bg-[#8abac5] p-6 rounded-lg shadow-md">
+                <div class="flex items-center justify-center space-x-6 mb-4">
+                    <img class="w-16 h-16 rounded-full" src="https://via.placeholder.com/150" alt="Client 2">
+                    <div class="text-[#254a58] font-semibold text-lg">Katie Smith</div>
+                </div>
+                <p class="text-lg italic mb-4">"I never worry about my cat when I leave. The team is reliable, caring, and professional. Highly recommend!"</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Information Section -->
+    <section id="contact" class="py-16 bg-gradient-to-r from-[#407e94] to-[#8abac5] text-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">Get in Touch</h2>
+            <p class="text-xl mb-8">Have any questions? Reach out to us, and we’ll be happy to assist with all your pet care needs.</p>
+            <a href="mailto:info@petsitting.com" class="bg-[#254a58] hover:bg-[#407e94] py-3 px-6 rounded-lg shadow-lg">Email Us</a>
+        </div>
+    </section>
+
 </body>
-
-<script>
-    let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("slides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-
-
-
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
-
-// Get the navbar
-var navbar = document.getElementById("nav");
-
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.scrollY >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-</script>
 </html>
