@@ -37,7 +37,7 @@
     </div>
 
     <!-- Mobile Menu (Hidden by default) -->
-    <div id="mobileMenu" class="md:hidden absolute left-0 top-0 w-full bg-[#254a58] bg-opacity-90 text-white p-8 transform -translate-y-full transition-all duration-300 ease-in-out">
+    <div id="mobileMenu" class="md:hidden absolute left-0 top-0 w-full bg-[#254a58] bg-opacity-90 text-white p-8 transform translate-y-[-100%] transition-transform duration-300 ease-in-out">
         <ul class="space-y-6 text-lg">
             <li><a href="#hero" class="hover:text-[#c0dee3]">Home</a></li>
             <li><a href="#services" class="hover:text-[#c0dee3]">Services</a></li>
@@ -47,6 +47,16 @@
         </ul>
     </div>
 </nav>
+
+<!-- Script for toggling the mobile menu -->
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('translate-y-[-100%]');  // Toggles the menu sliding in and out
+    });
+</script>
 
 
     <!-- Script for toggling the mobile menu -->
