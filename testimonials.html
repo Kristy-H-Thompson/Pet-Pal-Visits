@@ -46,4 +46,37 @@
             <li><a href="#contact" class="hover:text-[#c0dee3]">Contact</a></li>
         </ul>
     </div>
-</nav>
+</nav>    <!-- Footer Section -->
+<footer class="bg-[#254a58] text-white py-8">
+    <div class="max-w-6xl mx-auto text-center">
+        <!-- Logo and Company Name -->
+        <div class="mb-6">
+            <img src="https://i.postimg.cc/bN8Fnxj8/mountain.png" alt="Pet Pal Visits Logo" class="w-20 h-auto mx-auto">
+            <div class="text-2xl font-bold mt-4">Pet Pal Visits With Matthew</div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="text-lg mb-4">
+            <p>Email: <a href="mailto:matthew.sky.hayes@gmail.com" class="text-[#c0dee3]">matthew.sky.hayes@gmail.com</a></p>
+            <p>Facebook: <a href="https://www.facebook.com/groups/795858148714493" class="text-[#c0dee3]">link</a></p>
+        </div>
+
+
+        <!-- Copyright -->
+        <div class="text-sm text-gray-400 mt-4">
+            <p>&copy; 2025 Pet Pal Visits With Matthew. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+    <!-- Script for toggling the mobile menu -->
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('translate-y-[-100%]');  // Toggles the menu sliding in and out
+    });
+</script>
+
+</html>
