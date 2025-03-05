@@ -51,7 +51,7 @@
     <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
         <h2 class="text-3xl font-bold text-[#254a58] mb-6 text-center">New Client Form</h2>
 
-        <form action="#" method="POST" class="space-y-6">
+        <form id="clientForm" action="https://formsubmit.co/kristy.n.hayes@gmail.com" method="POST" class="space-y-6">
             <!-- Client Information -->
             <fieldset class="border border-gray-300 p-4 rounded-lg">
                 <legend class="text-xl font-semibold text-[#254a58]">Client Information</legend>
@@ -179,6 +179,33 @@
     document.getElementById('josie-watching').addEventListener('change', function() {
         const josiesSection = document.getElementById('josies-house-section');
         josiesSection.classList.toggle('hidden', this.value === 'no');
+    });
+
+        document.getElementById('clientForm').addEventListener('submit', function(event) {
+        let isValid = true;
+        const requiredFields = document.querySelectorAll('.required');
+        
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                field.classList.add('border-red-500');
+                isValid = false;
+            } else {
+                field.classList.remove('border-red-500');
+            }
+        });
+
+        if (!isValid) {
+            event.preventDefault();
+            alert("Please fill in all required fields.");
+        }
+    });
+
+    document.getElementById('add-pet').addEventListener('click', function() {
+        const petCount = document.querySelectorAll('.pet-entry').length + 1;
+        if (petCount > 4) return alert('Maximum of 4 pets allowed.');
+
+        const petHTML = `<div class="pet-entry border p-4 rounded-lg mt-4"> <h3 class="font-semibold text-[#407e94]">Pet ${petCount}</h3></div>`;
+        document.getElementById('pets-container').insertAdjacentHTML('beforeend', petHTML);
     });
 </script>
 
