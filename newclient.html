@@ -47,7 +47,7 @@
     </div>
 </nav>    
     
- <section id="new-client-form" class="py-16 bg-[#f2f8f1]">
+<section id="new-client-form" class="py-16 bg-[#f2f8f1]">
     <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
         <h2 class="text-3xl font-bold text-[#254a58] mb-6 text-center">New Client Form</h2>
 
@@ -101,40 +101,10 @@
                 <button type="button" id="add-pet" class="mt-4 bg-[#407e94] text-white px-4 py-2 rounded-md">+ Add Pet</button>
             </fieldset>
 
-            <!-- Extra House Duties -->
+            <!-- Bedding Instructions -->
             <fieldset class="border border-gray-300 p-4 rounded-lg">
-                <legend class="text-xl font-semibold text-[#254a58]">Extra House Duties</legend>
-                <textarea name="house_duties" class="w-full p-2 border rounded-md"></textarea>
-            </fieldset>
-
-            <!-- Josie's Home Option -->
-            <fieldset class="border border-gray-300 p-4 rounded-lg">
-                <legend class="text-xl font-semibold text-[#254a58]">Is Josie Watching Your Pet at Her Home?</legend>
-                <select id="josie-watching" class="w-full p-2 border rounded-md">
-                    <option value="no">No</option>
-                    <option value="yes">Yes</option>
-                </select>
-            </fieldset>
-
-            <!-- If Staying at Josie's House (Hidden by Default) -->
-            <fieldset id="josies-house-section" class="border border-gray-300 p-4 rounded-lg hidden">
-                <legend class="text-xl font-semibold text-[#254a58]">If Staying at Josie's House</legend>
-                
-                <label class="block text-lg mt-2">Vaccinations Up to Date? (Dates Given)</label>
-                <input type="text" name="vaccination_dates" class="w-full p-2 border rounded-md">
-
-                <label class="block text-lg mt-2">Fixed?</label>
-                <select name="fixed" class="w-full p-2 border rounded-md">
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
-
-                <label class="block text-lg mt-2">House Broken / Pee Pads?</label>
-                <select name="house_broken" class="w-full p-2 border rounded-md">
-                    <option value="House Broken">House Broken</option>
-                    <option value="Pee Pads">Uses Pee Pads</option>
-                    <option value="Diapers">Wears Diapers</option>
-                </select>
+                <legend class="text-xl font-semibold text-[#254a58]">Bedding Instructions for Overnight Stays</legend>
+                <textarea name="bedding_instructions" class="w-full p-2 border rounded-md"></textarea>
             </fieldset>
 
             <button type="submit" class="bg-[#254a58] hover:bg-[#407e94] text-white px-6 py-3 rounded-lg shadow-lg w-full">Submit Form</button>
@@ -177,14 +147,36 @@
 
                 <label class="block text-lg mt-2">Breed</label>
                 <input type="text" name="pet_breed[]" class="w-full p-2 border rounded-md">
+
+                <label class="block text-lg mt-2">Sex</label>
+                <select name="pet_sex[]" class="w-full p-2 border rounded-md">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+
+                <label class="block text-lg mt-2">Allergies</label>
+                <input type="text" name="pet_allergies[]" class="w-full p-2 border rounded-md">
+
+                <label class="block text-lg mt-2">Medications</label>
+                <input type="text" name="pet_medications[]" class="w-full p-2 border rounded-md">
+
+                <label class="block text-lg mt-2">Health Concerns</label>
+                <input type="text" name="pet_health_issues[]" class="w-full p-2 border rounded-md">
+
+                <label class="block text-lg mt-2">Favorite Toys / Activities</label>
+                <input type="text" name="pet_favorite_toys[]" class="w-full p-2 border rounded-md">
+
+                <label class="block text-lg mt-2">Feeding Schedule</label>
+                <textarea name="pet_feeding_schedule[]" class="w-full p-2 border rounded-md"></textarea>
+
+                <label class="block text-lg mt-2">Walks / Let Outs (Times)</label>
+                <textarea name="pet_walk_times[]" class="w-full p-2 border rounded-md"></textarea>
+
+                <label class="block text-lg mt-2">Anxiety or Extra Information</label>
+                <textarea name="pet_anxiety_notes[]" class="w-full p-2 border rounded-md"></textarea>
             </div>
         `;
         document.getElementById('pets-container').insertAdjacentHTML('beforeend', petHTML);
-    });
-
-    document.getElementById('josie-watching').addEventListener('change', function() {
-        const josiesSection = document.getElementById('josies-house-section');
-        josiesSection.classList.toggle('hidden', this.value === 'no');
     });
 </script>
 
