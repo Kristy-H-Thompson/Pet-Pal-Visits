@@ -83,21 +83,14 @@
             <!-- Emergency Contacts -->
             <fieldset class="border border-gray-300 p-4 rounded-lg">
                 <legend class="text-xl font-semibold text-[#254a58]">Emergency Contacts</legend>
-                <div id="emergency-container">
-                    <!-- Emergency Contact Fields Will Be Added Here -->
-                </div>
-
+                <div id="emergency-container"></div>
                 <button type="button" id="add-emergency" class="mt-4 bg-[#407e94] text-white px-4 py-2 rounded-md">+ Add Emergency Contact</button>
             </fieldset>
 
             <!-- Pet Information -->
             <fieldset class="border border-gray-300 p-4 rounded-lg">
                 <legend class="text-xl font-semibold text-[#254a58]">Pet Information</legend>
-
-                <div id="pets-container">
-                    <!-- Pet Fields Will Be Added Here -->
-                </div>
-
+                <div id="pets-container"></div>
                 <button type="button" id="add-pet" class="mt-4 bg-[#407e94] text-white px-4 py-2 rounded-md">+ Add Pet</button>
             </fieldset>
 
@@ -107,12 +100,60 @@
                 <textarea name="bedding_instructions" class="w-full p-2 border rounded-md"></textarea>
             </fieldset>
 
+            <!-- Josie's Home Option -->
+            <fieldset class="border border-gray-300 p-4 rounded-lg">
+                <legend class="text-xl font-semibold text-[#254a58]">Is Josie Watching Your Pet at Her Home?</legend>
+                <select id="josie-watching" class="w-full p-2 border rounded-md">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </fieldset>
+
+            <!-- If Staying at Josie's House (Hidden by Default) -->
+            <fieldset id="josies-house-section" class="border border-gray-300 p-4 rounded-lg hidden">
+                <legend class="text-xl font-semibold text-[#254a58]">If Staying at Josie's House</legend>
+
+                <label class="block text-lg mt-2">Are vaccinations up to date? (Include Dates Given)</label>
+                <input type="text" name="vaccination_dates" class="w-full p-2 border rounded-md">
+
+                <label class="block text-lg mt-2">Is the pet fixed?</label>
+                <select name="fixed" class="w-full p-2 border rounded-md">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+
+                <label class="block text-lg mt-2">House Broken, Pee Pads, or Diapers?</label>
+                <select name="house_broken" class="w-full p-2 border rounded-md">
+                    <option value="House Broken">House Broken</option>
+                    <option value="Pee Pads">Uses Pee Pads</option>
+                    <option value="Diapers">Wears Diapers</option>
+                </select>
+
+                <label class="block text-lg mt-2">Does your pet chew on furniture?</label>
+                <input type="text" name="chewing_behavior" class="w-full p-2 border rounded-md">
+
+                <label class="block text-lg mt-2">Does your pet get along with other dogs?</label>
+                <select name="dog_friendly" class="w-full p-2 border rounded-md">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+
+                <label class="block text-lg mt-2">Preferred Walk Type</label>
+                <select name="walk_preference" class="w-full p-2 border rounded-md">
+                    <option value="Yard Walks">Yard Walks</option>
+                    <option value="Long Walks to Park">Long Walks to Park</option>
+                </select>
+
+                <label class="block text-lg mt-2">How does your pet handle car rides?</label>
+                <input type="text" name="car_behavior" class="w-full p-2 border rounded-md">
+            </fieldset>
+
             <button type="submit" class="bg-[#254a58] hover:bg-[#407e94] text-white px-6 py-3 rounded-lg shadow-lg w-full">Submit Form</button>
         </form>
     </div>
 </section>
 
-<!-- JavaScript for Adding Pets & Emergency Contacts -->
+<!-- JavaScript for Adding Pets, Emergency Contacts & Josie's Section -->
 <script>
     document.getElementById('add-emergency').addEventListener('click', function() {
         const emergencyHTML = `
@@ -131,54 +172,16 @@
         const petCount = document.querySelectorAll('.pet-entry').length + 1;
         if (petCount > 4) return alert('Maximum of 4 pets allowed.');
 
-        const petHTML = `
-            <div class="pet-entry border p-4 rounded-lg mt-4">
-                <h3 class="font-semibold text-[#407e94]">Pet ${petCount}</h3>
-
-                <label class="block text-lg mt-2">Type</label>
-                <select name="pet_type[]" class="w-full p-2 border rounded-md">
-                    <option value="Dog">Dog</option>
-                    <option value="Cat">Cat</option>
-                    <option value="Other">Other</option>
-                </select>
-
-                <label class="block text-lg mt-2">Name</label>
-                <input type="text" name="pet_name[]" class="w-full p-2 border rounded-md">
-
-                <label class="block text-lg mt-2">Breed</label>
-                <input type="text" name="pet_breed[]" class="w-full p-2 border rounded-md">
-
-                <label class="block text-lg mt-2">Sex</label>
-                <select name="pet_sex[]" class="w-full p-2 border rounded-md">
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                </select>
-
-                <label class="block text-lg mt-2">Allergies</label>
-                <input type="text" name="pet_allergies[]" class="w-full p-2 border rounded-md">
-
-                <label class="block text-lg mt-2">Medications</label>
-                <input type="text" name="pet_medications[]" class="w-full p-2 border rounded-md">
-
-                <label class="block text-lg mt-2">Health Concerns</label>
-                <input type="text" name="pet_health_issues[]" class="w-full p-2 border rounded-md">
-
-                <label class="block text-lg mt-2">Favorite Toys / Activities</label>
-                <input type="text" name="pet_favorite_toys[]" class="w-full p-2 border rounded-md">
-
-                <label class="block text-lg mt-2">Feeding Schedule</label>
-                <textarea name="pet_feeding_schedule[]" class="w-full p-2 border rounded-md"></textarea>
-
-                <label class="block text-lg mt-2">Walks / Let Outs (Times)</label>
-                <textarea name="pet_walk_times[]" class="w-full p-2 border rounded-md"></textarea>
-
-                <label class="block text-lg mt-2">Anxiety or Extra Information</label>
-                <textarea name="pet_anxiety_notes[]" class="w-full p-2 border rounded-md"></textarea>
-            </div>
-        `;
+        const petHTML = `<div class="pet-entry border p-4 rounded-lg mt-4"> <h3 class="font-semibold text-[#407e94]">Pet ${petCount}</h3></div>`;
         document.getElementById('pets-container').insertAdjacentHTML('beforeend', petHTML);
     });
+
+    document.getElementById('josie-watching').addEventListener('change', function() {
+        const josiesSection = document.getElementById('josies-house-section');
+        josiesSection.classList.toggle('hidden', this.value === 'no');
+    });
 </script>
+
 
     
     <!-- Footer Section -->
