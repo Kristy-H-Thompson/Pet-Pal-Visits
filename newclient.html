@@ -47,84 +47,58 @@
     </div>
 </nav>    
     
-    <section id="new-client-form" class="py-16 bg-[#f2f8f1]">
+ <section id="new-client-form" class="py-16 bg-[#f2f8f1]">
     <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
         <h2 class="text-3xl font-bold text-[#254a58] mb-6 text-center">New Client Form</h2>
-        
+
         <form action="#" method="POST" class="space-y-6">
             <!-- Client Information -->
             <fieldset class="border border-gray-300 p-4 rounded-lg">
                 <legend class="text-xl font-semibold text-[#254a58]">Client Information</legend>
 
-                <label class="block text-lg mt-4">Your Name</label>
-                <input type="text" name="clientName" class="w-full p-2 border rounded-md">
-                
+                <label class="block text-lg mt-2">Full Name</label>
+                <input type="text" name="client_name" class="w-full p-2 border rounded-md">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-lg mt-4">Phone Number (Cell)</label>
+                        <input type="tel" name="phone_cell" class="w-full p-2 border rounded-md">
+                    </div>
+                    <div>
+                        <label class="block text-lg mt-4">Phone Number (Home)</label>
+                        <input type="tel" name="phone_home" class="w-full p-2 border rounded-md">
+                    </div>
+                </div>
+
                 <label class="block text-lg mt-4">Address</label>
                 <input type="text" name="address" class="w-full p-2 border rounded-md">
-
-                <label class="block text-lg mt-4">Phone Number (Cell)</label>
-                <input type="tel" name="phone_cell" class="w-full p-2 border rounded-md">
-
-                <label class="block text-lg mt-4">Phone Number (Home)</label>
-                <input type="tel" name="phone_home" class="w-full p-2 border rounded-md">
-
-                <label class="block text-lg mt-4">Emergency Contact</label>
-                <input type="text" name="emergency_contact" class="w-full p-2 border rounded-md">
 
                 <label class="block text-lg mt-4">Email</label>
                 <input type="email" name="email" class="w-full p-2 border rounded-md">
 
-                <label class="block text-lg mt-4">Vet / Emergency Vet Info</label>
+                <label class="block text-lg mt-4">Vet or Emergency Vet Info</label>
                 <textarea name="vet_info" class="w-full p-2 border rounded-md"></textarea>
             </fieldset>
 
-            <!-- Pet Information (4 Pets) -->
+            <!-- Emergency Contacts -->
             <fieldset class="border border-gray-300 p-4 rounded-lg">
-                <legend class="text-xl font-semibold text-[#254a58]">Pets Information</legend>
-
-                <!-- Looping through Pets -->
-                <div class="space-y-4">
-                    <template id="pet-template">
-                        <div class="pet-entry border p-4 rounded-lg">
-                            <h3 class="font-semibold text-[#407e94]">Pet <span class="pet-number"></span></h3>
-
-                            <label class="block text-lg mt-2">Name</label>
-                            <input type="text" name="pet_name[]" class="w-full p-2 border rounded-md">
-
-                            <label class="block text-lg mt-2">Breed</label>
-                            <input type="text" name="pet_breed[]" class="w-full p-2 border rounded-md">
-
-                            <label class="block text-lg mt-2">Sex</label>
-                            <select name="pet_sex[]" class="w-full p-2 border rounded-md">
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                            </select>
-
-                            <label class="block text-lg mt-2">Allergies</label>
-                            <input type="text" name="pet_allergies[]" class="w-full p-2 border rounded-md">
-
-                            <label class="block text-lg mt-2">Medications</label>
-                            <input type="text" name="pet_medications[]" class="w-full p-2 border rounded-md">
-
-                            <label class="block text-lg mt-2">Health Concerns (Diarrhea, Vomiting, Seizures, etc.)</label>
-                            <input type="text" name="pet_health_issues[]" class="w-full p-2 border rounded-md">
-
-                            <label class="block text-lg mt-2">Favorite Toys / Activities</label>
-                            <input type="text" name="pet_favorite_toys[]" class="w-full p-2 border rounded-md">
-
-                            <label class="block text-lg mt-2">Feeding Schedule</label>
-                            <textarea name="pet_feeding_schedule[]" class="w-full p-2 border rounded-md"></textarea>
-
-                            <label class="block text-lg mt-2">Walks / Let Outs (Times)</label>
-                            <textarea name="pet_walk_times[]" class="w-full p-2 border rounded-md"></textarea>
-
-                            <label class="block text-lg mt-2">Anxiety or Special Care Notes</label>
-                            <textarea name="pet_anxiety_notes[]" class="w-full p-2 border rounded-md"></textarea>
-                        </div>
-                    </template>
-                    <div id="pets-container"></div>
-                    <button type="button" id="add-pet" class="mt-4 bg-[#407e94] text-white px-4 py-2 rounded-md">Add Another Pet</button>
+                <legend class="text-xl font-semibold text-[#254a58]">Emergency Contacts</legend>
+                <div id="emergency-container">
+                    <!-- Emergency Contact Fields Will Be Added Here -->
                 </div>
+
+                <button type="button" id="add-emergency" class="mt-4 bg-[#407e94] text-white px-4 py-2 rounded-md">+ Add Emergency Contact</button>
+            </fieldset>
+
+            <!-- Pet Information -->
+            <fieldset class="border border-gray-300 p-4 rounded-lg">
+                <legend class="text-xl font-semibold text-[#254a58]">Pet Information</legend>
+
+                <div id="pets-container">
+                    <!-- Pet Fields Will Be Added Here -->
+                </div>
+
+                <button type="button" id="add-pet" class="mt-4 bg-[#407e94] text-white px-4 py-2 rounded-md">+ Add Pet</button>
             </fieldset>
 
             <!-- Extra House Duties -->
@@ -133,20 +107,23 @@
                 <textarea name="house_duties" class="w-full p-2 border rounded-md"></textarea>
             </fieldset>
 
-            <!-- Bedding Instructions -->
+            <!-- Josie's Home Option -->
             <fieldset class="border border-gray-300 p-4 rounded-lg">
-                <legend class="text-xl font-semibold text-[#254a58]">Bedding Instructions</legend>
-                <textarea name="bedding_instructions" class="w-full p-2 border rounded-md"></textarea>
+                <legend class="text-xl font-semibold text-[#254a58]">Is Josie Watching Your Pet at Her Home?</legend>
+                <select id="josie-watching" class="w-full p-2 border rounded-md">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
             </fieldset>
 
-            <!-- If Staying at Josie's House -->
-            <fieldset class="border border-gray-300 p-4 rounded-lg">
+            <!-- If Staying at Josie's House (Hidden by Default) -->
+            <fieldset id="josies-house-section" class="border border-gray-300 p-4 rounded-lg hidden">
                 <legend class="text-xl font-semibold text-[#254a58]">If Staying at Josie's House</legend>
                 
-                <label class="block text-lg mt-2">Are vaccinations up to date? Dates given:</label>
+                <label class="block text-lg mt-2">Vaccinations Up to Date? (Dates Given)</label>
                 <input type="text" name="vaccination_dates" class="w-full p-2 border rounded-md">
 
-                <label class="block text-lg mt-2">Are they fixed?</label>
+                <label class="block text-lg mt-2">Fixed?</label>
                 <select name="fixed" class="w-full p-2 border rounded-md">
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
@@ -158,30 +135,6 @@
                     <option value="Pee Pads">Uses Pee Pads</option>
                     <option value="Diapers">Wears Diapers</option>
                 </select>
-
-                <label class="block text-lg mt-2">Any chewing on furniture?</label>
-                <input type="text" name="chewing_behavior" class="w-full p-2 border rounded-md">
-
-                <label class="block text-lg mt-2">Gets along with other dogs?</label>
-                <select name="dog_friendly" class="w-full p-2 border rounded-md">
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
-
-                <label class="block text-lg mt-2">Preferred Walk Type</label>
-                <select name="walk_preference" class="w-full p-2 border rounded-md">
-                    <option value="Yard Walks">Yard Walks</option>
-                    <option value="Long Walks to Park">Long Walks to Park</option>
-                </select>
-
-                <label class="block text-lg mt-2">How are they in the car?</label>
-                <input type="text" name="car_behavior" class="w-full p-2 border rounded-md">
-            </fieldset>
-
-            <!-- Service Dates & Checklist -->
-            <fieldset class="border border-gray-300 p-4 rounded-lg">
-                <legend class="text-xl font-semibold text-[#254a58]">Service Dates & Checklist</legend>
-                <textarea name="service_dates" class="w-full p-2 border rounded-md"></textarea>
             </fieldset>
 
             <button type="submit" class="bg-[#254a58] hover:bg-[#407e94] text-white px-6 py-3 rounded-lg shadow-lg w-full">Submit Form</button>
@@ -189,14 +142,52 @@
     </div>
 </section>
 
+<!-- JavaScript for Adding Pets & Emergency Contacts -->
 <script>
-    document.getElementById('add-pet').addEventListener('click', function() {
-        const template = document.getElementById('pet-template').content.cloneNode(true);
-        const petCount = document.querySelectorAll('.pet-entry').length + 1;
-        template.querySelector('.pet-number').textContent = petCount;
-        document.getElementById('pets-container').appendChild(template);
+    document.getElementById('add-emergency').addEventListener('click', function() {
+        const emergencyHTML = `
+            <div class="emergency-entry border p-4 rounded-lg mt-4">
+                <label class="block text-lg mt-2">Contact Name</label>
+                <input type="text" name="emergency_name[]" class="w-full p-2 border rounded-md">
+                
+                <label class="block text-lg mt-2">Phone Number</label>
+                <input type="tel" name="emergency_phone[]" class="w-full p-2 border rounded-md">
+            </div>
+        `;
+        document.getElementById('emergency-container').insertAdjacentHTML('beforeend', emergencyHTML);
     });
-</script>    
+
+    document.getElementById('add-pet').addEventListener('click', function() {
+        const petCount = document.querySelectorAll('.pet-entry').length + 1;
+        if (petCount > 4) return alert('Maximum of 4 pets allowed.');
+
+        const petHTML = `
+            <div class="pet-entry border p-4 rounded-lg mt-4">
+                <h3 class="font-semibold text-[#407e94]">Pet ${petCount}</h3>
+
+                <label class="block text-lg mt-2">Type</label>
+                <select name="pet_type[]" class="w-full p-2 border rounded-md">
+                    <option value="Dog">Dog</option>
+                    <option value="Cat">Cat</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label class="block text-lg mt-2">Name</label>
+                <input type="text" name="pet_name[]" class="w-full p-2 border rounded-md">
+
+                <label class="block text-lg mt-2">Breed</label>
+                <input type="text" name="pet_breed[]" class="w-full p-2 border rounded-md">
+            </div>
+        `;
+        document.getElementById('pets-container').insertAdjacentHTML('beforeend', petHTML);
+    });
+
+    document.getElementById('josie-watching').addEventListener('change', function() {
+        const josiesSection = document.getElementById('josies-house-section');
+        josiesSection.classList.toggle('hidden', this.value === 'no');
+    });
+</script>
+
     
     <!-- Footer Section -->
 <footer class="bg-[#254a58] text-white py-8">
