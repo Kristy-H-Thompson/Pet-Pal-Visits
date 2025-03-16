@@ -132,7 +132,13 @@
 
 
 <!-- Testimonials Section -->
-<section id="testimonials" class="py-16 bg-[#c0dee3]">
+<section id="testimonials" class="relative py-16 bg-[#c0dee3] 
+    before:content-[''] before:absolute before:top-[-10px] before:left-0 before:w-full before:h-[20px] 
+    before:bg-[length:40px_100%] before:bg-[linear-gradient(135deg,_#c0dee3_25%,_transparent_25%),_linear-gradient(225deg,_#c0dee3_25%,_transparent_25%)] before:bg-[0_0]
+    
+    after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:w-full after:h-[20px] 
+    after:bg-[length:40px_100%] after:bg-[linear-gradient(135deg,_#c0dee3_25%,_transparent_25%),_linear-gradient(225deg,_#c0dee3_25%,_transparent_25%)] after:bg-[0_0]">
+    
     <div class="max-w-6xl mx-auto text-center">
         <h2 class="text-4xl font-bold text-[#254a58] mb-10">What Our Clients Say</h2>
         <div class="space-y-8">
@@ -159,6 +165,7 @@
         </div>
     </div>
 </section>
+
 
     
 
