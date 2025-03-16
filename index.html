@@ -249,13 +249,19 @@
 
 
     <!-- Contact Information Section -->
-    <section id="contact" class="py-16 bg-gradient-to-r from-[#407e94] to-[#8abac5] text-white">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-8">Get in Touch</h2>
-            <p class="text-xl mb-8">Have any questions? Reach out to us, and we’ll be happy to assist with all your pet care needs.</p>
-            <a href="mailto:matthew.sky.hayes@gmail.com" class="bg-[#254a58] hover:bg-[#407e94] py-3 px-6 rounded-lg shadow-lg">Email Us</a>
-        </div>
-    </section>
+<section id="contact" class="relative py-16 bg-gradient-to-r from-[#407e94] to-[#8abac5] text-white 
+    before:content-[''] before:absolute before:top-[-10px] before:left-0 before:w-full before:h-[20px] 
+    before:bg-[length:40px_100%] before:bg-[linear-gradient(135deg,_#8abac5_25%,_transparent_25%),_linear-gradient(225deg,_#8abac5_25%,_transparent_25%)] before:bg-[0_0]">
+    
+    <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8">Get in Touch</h2>
+        <p class="text-xl mb-8">Have any questions? Reach out to us, and we’ll be happy to assist with all your pet care needs.</p>
+        <a href="mailto:matthew.sky.hayes@gmail.com" class="bg-[#254a58] hover:bg-[#407e94] py-3 px-6 rounded-lg shadow-lg transition duration-300">
+            Email Us
+        </a>
+    </div>
+</section>
+
 
     <!-- Footer Section -->
 <footer class="bg-[#254a58] text-white py-8">
