@@ -170,34 +170,40 @@
     
 
     <!-- Our Team Section -->
-    <section id="team" class="py-16 bg-[#8abac5]">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-4xl font-bold text-[#254a58] mb-10">Meet Our Team</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
-                <!-- Team member -->
-                <div class="bg-white shadow-lg rounded-lg p-6">
-                    <img class="w-32 h-32 rounded-full mx-auto mb-4" src="./assets/images/matthew.png" alt="Team Member 1">
-                    <h3 class="text-xl font-semibold text-[#254a58]">Matthew Hayes</h3>
-                    <p class="text-sm text-gray-600 mb-2">Owner</p>
-                    <div class="flex justify-center space-x-4 text-[#407e94]">
-                        <i class="fas fa-paw text-[#254a58]"></i>
-                        <i class="fas fa-heart text-[#c0dee3]"></i>
-                    </div>
+<section id="team" class="relative py-16 bg-[#8abac5] 
+    before:content-[''] before:absolute before:top-[-10px] before:left-0 before:w-full before:h-[20px] 
+    before:bg-[length:40px_100%] before:bg-[linear-gradient(135deg,_#8abac5_25%,_transparent_25%),_linear-gradient(225deg,_#8abac5_25%,_transparent_25%)] before:bg-[0_0]
+    
+    after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:w-full after:h-[20px] 
+    after:bg-[length:40px_100%] after:bg-[linear-gradient(135deg,_#8abac5_25%,_transparent_25%),_linear-gradient(225deg,_#8abac5_25%,_transparent_25%)] after:bg-[0_0]">
+    
+    <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-[#254a58] mb-10">Meet Our Team</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+            <!-- Team Member 1 -->
+            <div class="bg-white shadow-lg rounded-lg p-6">
+                <img class="w-32 h-32 rounded-full mx-auto mb-4" src="./assets/images/matthew.png" alt="Team Member 1">
+                <h3 class="text-xl font-semibold text-[#254a58]">Matthew Hayes</h3>
+                <p class="text-sm text-gray-600 mb-2">Owner</p>
+                <div class="flex justify-center space-x-4 text-[#407e94]">
+                    <i class="fas fa-paw text-[#254a58]"></i>
+                    <i class="fas fa-heart text-[#c0dee3]"></i>
                 </div>
-                <!-- Team member -->
-                <div class="bg-white shadow-lg rounded-lg p-6">
-                    <img class="w-32 h-32 rounded-full mx-auto mb-4" src="./assets/images/josie.png" alt="Team Member 2">
-                    <h3 class="text-xl font-semibold text-[#254a58]">Josie</h3>
-                    <p class="text-sm text-gray-600 mb-2">Pet Sitter</p>
-                    <div class="flex justify-center space-x-4 text-[#407e94]">
-                        <i class="fas fa-paw text-[#254a58]"></i>
-                        <i class="fas fa-leaf text-[#8abac5]"></i>
-                    </div>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="bg-white shadow-lg rounded-lg p-6">
+                <img class="w-32 h-32 rounded-full mx-auto mb-4" src="./assets/images/josie.png" alt="Team Member 2">
+                <h3 class="text-xl font-semibold text-[#254a58]">Josie</h3>
+                <p class="text-sm text-gray-600 mb-2">Pet Sitter</p>
+                <div class="flex justify-center space-x-4 text-[#407e94]">
+                    <i class="fas fa-paw text-[#254a58]"></i>
+                    <i class="fas fa-leaf text-[#8abac5]"></i>
                 </div>
-              
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
         <!-- Animal Gallery Section -->
     <section id="slideshow" class="py-16 bg-[#c0dee3]">
