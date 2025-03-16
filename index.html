@@ -206,41 +206,45 @@
 
 
         <!-- Animal Gallery Section -->
-    <section id="slideshow" class="py-16 bg-[#c0dee3]">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-4xl font-bold text-[#254a58] mb-10">Photo Gallery</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                <!-- Image 1 -->
-                <div class="relative group">
-                    <img class="w-full h-64 object-cover rounded-lg shadow-lg transform transition duration-300 ease-in-out group-hover:scale-105" src="./assets/images/slider1.jpg" alt="Pet 1">
-                    <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-lg font-semibold">Playful Pup</p>
-                    </div>
+<section id="slideshow" class="relative py-16 bg-[#c0dee3] 
+    before:content-[''] before:absolute before:top-[-10px] before:left-0 before:w-full before:h-[20px] 
+    before:bg-[length:40px_100%] before:bg-[linear-gradient(135deg,_#c0dee3_25%,_transparent_25%),_linear-gradient(225deg,_#c0dee3_25%,_transparent_25%)] before:bg-[0_0]">
+    
+    <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-[#254a58] mb-10">Photo Gallery</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Image 1 -->
+            <div class="relative group">
+                <img class="w-full h-64 object-cover rounded-lg shadow-lg transform transition duration-300 ease-in-out group-hover:scale-105" src="./assets/images/slider1.jpg" alt="Pet 1">
+                <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+                    <p class="text-white text-lg font-semibold">Playful Pup</p>
                 </div>
-                <!-- Image 2 -->
-                <div class="relative group">
-                    <img class="w-full h-64 object-cover rounded-lg shadow-lg transform transition duration-300 ease-in-out group-hover:scale-105" src="./assets/images/slider2.jpg" alt="Pet 2">
-                    <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-lg font-semibold">Friendly Cat</p>
-                    </div>
+            </div>
+            <!-- Image 2 -->
+            <div class="relative group">
+                <img class="w-full h-64 object-cover rounded-lg shadow-lg transform transition duration-300 ease-in-out group-hover:scale-105" src="./assets/images/slider2.jpg" alt="Pet 2">
+                <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+                    <p class="text-white text-lg font-semibold">Friendly Cat</p>
                 </div>
-                <!-- Image 3 -->
-                <div class="relative group">
-                    <img class="w-full h-64 object-cover rounded-lg shadow-lg transform transition duration-300 ease-in-out group-hover:scale-105" src="./assets/images/slider3.jpg" alt="Pet 3">
-                    <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-lg font-semibold">Cute Bunny</p>
-                    </div>
+            </div>
+            <!-- Image 3 -->
+            <div class="relative group">
+                <img class="w-full h-64 object-cover rounded-lg shadow-lg transform transition duration-300 ease-in-out group-hover:scale-105" src="./assets/images/slider3.jpg" alt="Pet 3">
+                <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+                    <p class="text-white text-lg font-semibold">Cute Bunny</p>
                 </div>
-                <!-- Image 4 -->
-                <div class="relative group">
-                    <img class="w-full h-64 object-cover rounded-lg shadow-lg transform transition duration-300 ease-in-out group-hover:scale-105" src="https://via.placeholder.com/800x400/bed3c7/ffffff?text=Happy+Pets" alt="Pet 4">
-                    <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
-                        <p class="text-white text-lg font-semibold">Happy Kitten</p>
-                    </div>
+            </div>
+            <!-- Image 4 -->
+            <div class="relative group">
+                <img class="w-full h-64 object-cover rounded-lg shadow-lg transform transition duration-300 ease-in-out group-hover:scale-105" src="https://via.placeholder.com/800x400/bed3c7/ffffff?text=Happy+Pets" alt="Pet 4">
+                <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+                    <p class="text-white text-lg font-semibold">Happy Kitten</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
  
 
 
