@@ -182,18 +182,28 @@
 
 
 <!-- Testimonials Section -->
-<section id="testimonials" class="py-16 bg-[#c0dee3]">
-    <div class="max-w-6xl mx-auto text-center">
+<section id="testimonials" class="relative py-16 bg-[#c0dee3]">
+    <!-- Spiked Top Border -->
+    <div class="absolute top-0 left-0 w-full h-[30px] bg-[#c0dee3] 
+        clip-path-[polygon(0%_100%,_5%_0%,_10%_100%,_15%_0%,_20%_100%,_25%_0%,_30%_100%,_35%_0%,_40%_100%,_45%_0%,_50%_100%,_55%_0%,_60%_100%,_65%_0%,_70%_100%,_75%_0%,_80%_100%,_85%_0%,_90%_100%,_95%_0%,_100%_100%)]">
+    </div>
+
+    <div class="max-w-6xl mx-auto text-center relative z-10">
         <h2 class="text-4xl font-bold text-[#254a58] mb-10">What Our Clients Say</h2>
         <div id="testimonials-container" class="grid grid-cols-1 md:grid-cols-2 gap-10"></div>
     </div>
 
     <div class="text-center mt-8">
-    <a href="https://docs.google.com/forms/d/1rCEAzbv5L2VgMXGsZcNDQLJSDcZQSNtZX0WEwnK_2D8/edit" target="_blank" 
-       class="bg-[#254a58] hover:bg-[#407e94] text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300">
-        Leave a Testimonial
-    </a>
-</div>
+        <a href="https://docs.google.com/forms/d/1rCEAzbv5L2VgMXGsZcNDQLJSDcZQSNtZX0WEwnK_2D8/edit" target="_blank" 
+           class="bg-[#254a58] hover:bg-[#407e94] text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300">
+            Leave a Testimonial
+        </a>
+    </div>
+
+    <!-- Spiked Bottom Border -->
+    <div class="absolute bottom-0 left-0 w-full h-[30px] bg-[#c0dee3] 
+        clip-path-[polygon(0%_100%,_5%_0%,_10%_100%,_15%_0%,_20%_100%,_25%_0%,_30%_100%,_35%_0%,_40%_100%,_45%_0%,_50%_100%,_55%_0%,_60%_100%,_65%_0%,_70%_100%,_75%_0%,_80%_100%,_85%_0%,_90%_100%,_95%_0%,_100%_100%)]">
+    </div>
 </section>
 
 <script>
