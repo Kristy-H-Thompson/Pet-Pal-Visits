@@ -8,6 +8,19 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
+
+    <style>
+        .spiked-border {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background-color: inherit;
+    clip-path: polygon(0% 100%, 5% 0%, 10% 100%, 15% 0%, 20% 100%, 25% 0%, 
+                       30% 100%, 35% 0%, 40% 100%, 45% 0%, 50% 100%, 55% 0%, 
+                       60% 100%, 65% 0%, 70% 100%, 75% 0%, 80% 100%, 85% 0%, 
+                       90% 100%, 95% 0%, 100% 100%);
+}
+    </style>
 <body class="font-sans bg-[#f2f8f1]">
 
 
@@ -333,9 +346,8 @@ loadTestimonials();
     </div>
 
     <!-- Spiked Bottom Border -->
-    <div class="absolute bottom-0 left-0 w-full h-[30px] bg-[#8abac5] 
-        clip-path-[polygon(0%_100%,_5%_0%,_10%_100%,_15%_0%,_20%_100%,_25%_0%,_30%_100%,_35%_0%,_40%_100%,_45%_0%,_50%_100%,_55%_0%,_60%_100%,_65%_0%,_70%_100%,_75%_0%,_80%_100%,_85%_0%,_90%_100%,_95%_0%,_100%_100%)]">
-    </div>
+       <div class="spiked-border bottom-0 left-0"></div>
+
 </section>
 
 
